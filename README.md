@@ -99,3 +99,4 @@ Para domínio customizado: **Custom domains → Add custom domain** no painel do
 ├── static/              # Arquivos estáticos (favicon, etc.)
 └── hugo.toml            # Configuração principal
 ```
+# Blog
