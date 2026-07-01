@@ -1,0 +1,25 @@
+{{ define "main" }}
+<article class="article article--note">
+  <div class="container">
+    <header class="article-header">
+      <div class="article-meta">
+        <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "02 de January de 2006" }}</time>
+      </div>
+      <h1 class="article-title">{{ .Title }}</h1>
+      {{- with .Params.tags }}
+      <div class="tag-list">
+        {{- range . }}<span class="tag">{{ . }}</span>{{ end }}
+      </div>
+      {{- end }}
+    </header>
+
+    <div class="article-body prose">
+      {{ .Content }}
+    </div>
+
+    <footer class="article-footer">
+      <a href="/notas/" class="back-link">← Todas as notas</a>
+    </footer>
+  </div>
+</article>
+{{ end }}

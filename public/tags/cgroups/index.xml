@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cgroups on Nícolas Tomaschewski Lopes</title>
+    <link>http://localhost:1313/tags/cgroups/</link>
+    <description>Recent content in Cgroups on Nícolas Tomaschewski Lopes</description>
+    <generator>Hugo</generator>
+    <language>pt-BR</language>
+    <lastBuildDate>Tue, 05 Nov 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/cgroups/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Containers na prática: do conceito à produção</title>
+      <link>http://localhost:1313/blog/tecnologia/containers-na-pratica/</link>
+      <pubDate>Tue, 05 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/tecnologia/containers-na-pratica/</guid>
+      <description>&lt;p&gt;Durante muito tempo, containers foram para mim uma caixa preta conveniente. Eu entendia o &lt;em&gt;o que&lt;/em&gt; — isolar processos, empacotar dependências, garantir reprodutibilidade — mas não o &lt;em&gt;como&lt;/em&gt;.&lt;/p&gt;&#xA;&lt;p&gt;Isso mudou quando precisei depurar um problema de performance em um container que consumia mais CPU do que deveria. Para entender o problema, precisei entender os mecanismos subjacentes.&lt;/p&gt;&#xA;&lt;h2 id=&#34;o-que-um-container-realmente-é&#34;&gt;O que um container realmente é&lt;/h2&gt;&#xA;&lt;p&gt;Um container Linux não é uma máquina virtual. Não há hypervisor, não há kernel separado. O que existe são dois mecanismos do kernel Linux trabalhando juntos:&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,74 @@
+baseURL = "https://nicolaslopes.dev/"
+languageCode = "pt-BR"
+title = "Nícolas Tomaschewski Lopes"
+enableRobotsTXT = true
+enableEmoji = false
+[pagination]
+  pagerSize = 10
+copyright = "Nícolas Tomaschewski Lopes"
+
+[params]
+  author          = "Nícolas Tomaschewski Lopes"
+  description     = "Engenharia, tecnologia e aprendizado contínuo. Projetos, artigos técnicos e reflexões sobre sistemas, software, automação e ciência."
+  email           = "nicolas.tomaschewski@gmail.com"
+  github          = "https://github.com/NicolasTomaschewski"
+  linkedin        = "https://www.linkedin.com/in/nicolastomaschewski/"
+  company         = "IronFrame"
+  tagline         = "Engenharia, tecnologia e aprendizado contínuo."
+  subtitle        = "Projetos, artigos técnicos e reflexões sobre sistemas, software, automação e ciência."
+  showReadingTime = true
+
+[outputs]
+  home    = ["HTML", "RSS"]
+  section = ["HTML", "RSS"]
+  page    = ["HTML"]
+
+[markup]
+  [markup.highlight]
+    style        = "dracula"
+    lineNos      = false
+    noClasses    = true
+    guessSyntax  = true
+    tabWidth     = 2
+  [markup.goldmark.renderer]
+    unsafe = true
+  [markup.tableOfContents]
+    endLevel   = 3
+    ordered    = false
+    startLevel = 2
+
+[sitemap]
+  changefreq = "monthly"
+  priority   = 0.5
+  filename   = "sitemap.xml"
+
+[[menus.main]]
+  name   = "Projetos"
+  url    = "/projetos/"
+  weight = 10
+  [menus.main.params]
+    highlight = true
+
+[[menus.main]]
+  name   = "Blog"
+  url    = "/blog/"
+  weight = 20
+  [menus.main.params]
+    highlight = true
+
+[[menus.main]]
+  name   = "Notas"
+  url    = "/notas/"
+  weight = 30
+  [menus.main.params]
+    highlight = true
+
+[[menus.main]]
+  name   = "Sobre"
+  url    = "/sobre/"
+  weight = 40
+
+[[menus.main]]
+  name   = "Contato"
+  url    = "/contato/"
+  weight = 50

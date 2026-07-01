@@ -1,0 +1,30 @@
+{{ define "main" }}
+<div class="container">
+  <header class="page-header">
+    <h1 class="page-title">{{ .Title }}</h1>
+    {{- with .Description }}
+    <p class="page-description">{{ . }}</p>
+    {{- end }}
+    {{- with .Content }}
+    <div class="page-intro prose">{{ . }}</div>
+    {{- end }}
+  </header>
+
+  <div class="card-grid card-grid--large">
+    {{- range .Pages }}
+    <article class="card card--project">
+      <div class="card-body">
+        <h2 class="card-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+        {{- with .Params.tecnologias }}
+        <div class="tag-list">
+          {{- range . }}<span class="tag">{{ . }}</span>{{ end }}
+        </div>
+        {{- end }}
+        <p class="card-excerpt">{{ .Summary | plainify | truncate 200 "..." }}</p>
+        <a href="{{ .Permalink }}" class="card-link">Ver projeto →</a>
+      </div>
+    </article>
+    {{- end }}
+  </div>
+</div>
+{{ end }}

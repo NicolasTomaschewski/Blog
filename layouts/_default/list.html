@@ -1,0 +1,51 @@
+{{ define "main" }}
+<div class="container">
+  <header class="page-header">
+    <h1 class="page-title">{{ .Title }}</h1>
+    {{- with .Description }}
+    <p class="page-description">{{ . }}</p>
+    {{- end }}
+    {{- with .Content }}
+    <div class="page-intro prose">{{ . }}</div>
+    {{- end }}
+  </header>
+
+  {{- if eq .Section "blog" }}
+  {{- $cats := slice "engenharia" "tecnologia" "reflexoes" "leituras" }}
+  <div class="category-tabs">
+    <a href="/blog/" class="cat-tab{{ if not .Params.categoria }} cat-tab--active{{ end }}">Todos</a>
+    {{- range $cats }}
+    <a href="/blog/{{ . }}/" class="cat-tab{{ if eq $.Section . }} cat-tab--active{{ end }}">{{ . | title }}</a>
+    {{- end }}
+  </div>
+  {{- end }}
+
+  {{- $pages := .RegularPagesRecursive | union .RegularPages }}
+  {{- if eq .Section "blog" }}
+    {{- $pages = .RegularPagesRecursive }}
+  {{- else }}
+    {{- $pages = .Pages }}
+  {{- end }}
+  {{- if $pages }}
+  <ul class="post-list">
+    {{- range $pages }}
+    <li class="post-list-item post-list-item--full">
+      <div class="post-list-content">
+        <a href="{{ .Permalink }}" class="post-list-link">{{ .Title }}</a>
+        {{- with .Description }}<p class="post-list-excerpt">{{ . | truncate 140 "..." }}</p>{{- end }}
+        <div class="post-list-meta">
+          <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "02 Jan 2006" }}</time>
+          {{- with .Params.categoria }}<span class="dot">·</span><span>{{ . }}</span>{{- end }}
+          {{- if site.Params.showReadingTime }}<span class="dot">·</span><span>{{ .ReadingTime }} min</span>{{- end }}
+        </div>
+      </div>
+    </li>
+    {{- end }}
+  </ul>
+
+  {{- template "_internal/pagination.html" . }}
+  {{- else }}
+  <p class="empty-state">Nenhum conteúdo publicado ainda.</p>
+  {{- end }}
+</div>
+{{ end }}

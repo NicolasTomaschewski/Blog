@@ -1,0 +1,89 @@
+{{ define "main" }}
+<section class="hero">
+  <div class="container hero-inner">
+    <div class="hero-text">
+      <p class="hero-eyebrow">{{ site.Params.author }}</p>
+      <h1 class="hero-title">{{ site.Params.tagline }}</h1>
+      <p class="hero-subtitle">{{ site.Params.subtitle }}</p>
+      {{- with .Content }}
+      <div class="hero-intro">{{ . }}</div>
+      {{- end }}
+      <div class="hero-links">
+        <a href="/sobre/" class="btn btn-primary">Sobre mim</a>
+        <a href="/projetos/" class="btn btn-secondary">Ver projetos</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+{{- $projetos := where site.RegularPages "Section" "projetos" -}}
+{{- if $projetos }}
+<section class="section-block">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Projetos</h2>
+      <a href="/projetos/" class="section-link">Ver todos →</a>
+    </div>
+    <div class="card-grid">
+      {{- range first 3 $projetos }}
+      <article class="card">
+        <div class="card-body">
+          <h3 class="card-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+          {{- with .Params.tecnologias }}
+          <div class="tag-list">
+            {{- range first 4 . }}<span class="tag">{{ . }}</span>{{ end }}
+          </div>
+          {{- end }}
+          <p class="card-excerpt">{{ .Summary | plainify | truncate 120 "..." }}</p>
+        </div>
+      </article>
+      {{- end }}
+    </div>
+  </div>
+</section>
+{{- end }}
+
+{{- $artigos := where site.RegularPages "Section" "blog" -}}
+{{- if $artigos }}
+<section class="section-block section-alt">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Artigos recentes</h2>
+      <a href="/blog/" class="section-link">Ver todos →</a>
+    </div>
+    <ul class="post-list">
+      {{- range first 5 $artigos }}
+      <li class="post-list-item">
+        <a href="{{ .Permalink }}" class="post-list-link">{{ .Title }}</a>
+        <div class="post-list-meta">
+          <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "02 Jan 2006" }}</time>
+          {{- with .Params.categoria }}<span class="dot">·</span><span>{{ . }}</span>{{- end }}
+          {{- if site.Params.showReadingTime }}<span class="dot">·</span><span>{{ .ReadingTime }} min de leitura</span>{{- end }}
+        </div>
+      </li>
+      {{- end }}
+    </ul>
+  </div>
+</section>
+{{- end }}
+
+{{- $notas := where site.RegularPages "Section" "notas" -}}
+{{- if $notas }}
+<section class="section-block">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Notas recentes</h2>
+      <a href="/notas/" class="section-link">Ver todas →</a>
+    </div>
+    <ul class="post-list post-list--compact">
+      {{- range first 5 $notas }}
+      <li class="post-list-item">
+        <a href="{{ .Permalink }}" class="post-list-link">{{ .Title }}</a>
+        <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "02 Jan 2006" }}</time>
+      </li>
+      {{- end }}
+    </ul>
+  </div>
+</section>
+{{- end }}
+{{ end }}

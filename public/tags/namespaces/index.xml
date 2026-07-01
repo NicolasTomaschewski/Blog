@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Namespaces on Nícolas Tomaschewski Lopes</title>
+    <link>http://localhost:1313/tags/namespaces/</link>
+    <description>Recent content in Namespaces on Nícolas Tomaschewski Lopes</description>
+    <generator>Hugo</generator>
+    <language>pt-BR</language>
+    <lastBuildDate>Mon, 10 Feb 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/namespaces/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Inspecionando namespaces de um container em execução</title>
+      <link>http://localhost:1313/notas/containers-namespaces/</link>
+      <pubDate>Mon, 10 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/notas/containers-namespaces/</guid>
+      <description>&lt;p&gt;Para inspecionar os namespaces de um container em execução sem entrar nele:&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#6272a4&#34;&gt;# Encontrar o PID do processo principal do container&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;PID&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;$(&lt;/span&gt;docker inspect --format &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;{{.State.Pid}}&amp;#39;&lt;/span&gt; &amp;lt;container_id&amp;gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;)&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#6272a4&#34;&gt;# Listar os namespaces do processo&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ls -la /proc/&lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;$PID&lt;/span&gt;/ns/&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;A saída mostra symlinks para cada namespace: &lt;code&gt;cgroup&lt;/code&gt;, &lt;code&gt;ipc&lt;/code&gt;, &lt;code&gt;mnt&lt;/code&gt;, &lt;code&gt;net&lt;/code&gt;, &lt;code&gt;pid&lt;/code&gt;, &lt;code&gt;pid_for_children&lt;/code&gt;, &lt;code&gt;time&lt;/code&gt;, &lt;code&gt;uts&lt;/code&gt;, &lt;code&gt;user&lt;/code&gt;.&lt;/p&gt;&#xA;&lt;p&gt;Dois processos que compartilham o mesmo namespace têm symlinks que apontam para o mesmo inode. Útil para verificar se dois containers estão realmente isolados ou compartilhando algum namespace (como acontece com &lt;code&gt;--network host&lt;/code&gt;).&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Containers na prática: do conceito à produção</title>
+      <link>http://localhost:1313/blog/tecnologia/containers-na-pratica/</link>
+      <pubDate>Tue, 05 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/tecnologia/containers-na-pratica/</guid>
+      <description>&lt;p&gt;Durante muito tempo, containers foram para mim uma caixa preta conveniente. Eu entendia o &lt;em&gt;o que&lt;/em&gt; — isolar processos, empacotar dependências, garantir reprodutibilidade — mas não o &lt;em&gt;como&lt;/em&gt;.&lt;/p&gt;&#xA;&lt;p&gt;Isso mudou quando precisei depurar um problema de performance em um container que consumia mais CPU do que deveria. Para entender o problema, precisei entender os mecanismos subjacentes.&lt;/p&gt;&#xA;&lt;h2 id=&#34;o-que-um-container-realmente-é&#34;&gt;O que um container realmente é&lt;/h2&gt;&#xA;&lt;p&gt;Um container Linux não é uma máquina virtual. Não há hypervisor, não há kernel separado. O que existe são dois mecanismos do kernel Linux trabalhando juntos:&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
