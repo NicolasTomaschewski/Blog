@@ -53,6 +53,15 @@
 <!-- Sitemap -->
 <link rel="sitemap" type="application/xml" href="/sitemap.xml">
 
+<!-- Favicon -->
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+<!-- og:image -->
+{{- $ogImage := "https://nicolastlopes.com.br/og-image.png" }}
+{{- with site.Params.ogImage }}{{ $ogImage = . }}{{ end }}
+<meta property="og:image" content="{{ $ogImage }}">
+<meta name="twitter:image" content="{{ $ogImage }}">
+
 <!-- Stylesheet -->
 {{ $css := resources.Get "css/main.css" | minify | fingerprint }}
 <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">

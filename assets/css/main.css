@@ -663,7 +663,7 @@ button { cursor: pointer; background: none; border: none; font: inherit; }
 /* ============================================================
    Projetos — single
    ============================================================ */
-.project-page .article-header { max-width: none; }
+.project-page .article-header { max-width: none; margin-bottom: 0; padding-bottom: 1rem; }
 .project-page .article-body  { max-width: none; }
 .project-page .article-footer { max-width: none; }
 

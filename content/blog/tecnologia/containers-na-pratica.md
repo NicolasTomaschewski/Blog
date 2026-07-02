@@ -4,6 +4,7 @@ description: "Como minha compreensão de containers evoluiu de 'Docker é um jei
 date: 2024-11-05
 categoria: "tecnologia"
 tags: ["docker", "containers", "linux", "namespaces", "cgroups", "infraestrutura"]
+draft: true
 ---
 
 Durante muito tempo, containers foram para mim uma caixa preta conveniente. Eu entendia o _o que_ — isolar processos, empacotar dependências, garantir reprodutibilidade — mas não o _como_.
