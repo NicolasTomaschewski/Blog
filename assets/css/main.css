@@ -621,6 +621,32 @@ button { cursor: pointer; background: none; border: none; font: inherit; }
   margin: 1.5rem auto;
 }
 
+.prose-figure {
+  max-width: var(--prose-w);
+  margin: 2rem auto;
+}
+
+.prose-figure img {
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  background: #fff;
+  margin: 0 auto;
+}
+
+.prose-figure--plain img {
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.prose-figure figcaption {
+  margin-top: .6rem;
+  font-family: var(--font-ui);
+  font-size: .85rem;
+  font-style: italic;
+  color: var(--text-muted);
+  text-align: center;
+}
+
 /* ============================================================
    Callout
    ============================================================ */

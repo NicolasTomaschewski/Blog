@@ -1,0 +1,13 @@
+{{- $img := .Page.Resources.GetMatch (.Get "src") -}}
+{{- $maxWidth := .Get "width" | default 700 | int -}}
+{{- $out := $img -}}
+{{- if gt $img.Width $maxWidth -}}
+  {{- $out = $img.Resize (printf "%dx" $maxWidth) -}}
+{{- end -}}
+{{- $plain := eq (.Get "card") "false" -}}
+<figure class="prose-figure{{ if $plain }} prose-figure--plain{{ end }}">
+  <img src="{{ $out.RelPermalink }}" width="{{ $out.Width }}" height="{{ $out.Height }}" alt="{{ .Get "alt" | default (.Get "caption") }}" loading="lazy">
+  {{- with .Get "caption" }}
+  <figcaption>{{ . }}</figcaption>
+  {{- end }}
+</figure>

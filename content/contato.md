@@ -16,3 +16,8 @@ Prefiro comunicação assíncrona e direta ao ponto.
 [nicolas.tomaschewski@gmail.com](mailto:nicolas.tomaschewski@gmail.com)
 
 **IronFrame** — desenvolvimento de software e infraestrutura de redes:
+<div class="callout">
+  <p class="callout-label">IronFrame</p>
+  <p>Desenvolvimento de software e infraestrutura de redes — soluções técnicas construídas para durar.</p>
+  <a href="/contato/" class="callout-link">Entre em contato →</a>
+</div>

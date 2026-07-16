@@ -4,45 +4,71 @@ description: "Quem sou, o que estudo e por que escrevo."
 type: "page"
 ---
 
-Meu nome é Nícolas Tomaschewski Lopes. Sou estudante de Engenharia da Computação e trabalho na interseção entre infraestrutura, automação e inteligência artificial.
+Meu nome é Nícolas Tomaschewski Lopes. Sou estudante de Engenharia da Computação e trabalho na interseção entre infraestrutura, DevOps, desenvolvimento de sites e ciência.
 
 Este site é meu laboratório público — um espaço para documentar o que aprendo, registrar projetos e pensar em voz alta sobre sistemas, tecnologia e ciência.
 
 ## Como cheguei até aqui
 
-Meu interesse por computadores começou antes de entender o que estava fazendo. O que me atraía não era a máquina em si, mas a ideia de que era possível descrever processos de forma precisa e fazer com que eles acontecessem de forma automática, repetível e verificável.
+Meu interesse por ciência e tecnologia começou antes mesmo de eu entender o que estava fazendo. O que me atraía não eram as máquinas em si, mas o que era possível construir com elas. Desde cedo percebi que poderia criar sites, jogos, sistemas que ajudassem as pessoas, placas de circuito impresso ou qualquer outra coisa que meu conhecimento permitisse.
 
-Essa intuição me acompanhou até a Engenharia da Computação.
+Esse interesse acabou me levando para a Engenharia da Computação.
 
 ## Engenharia da Computação
 
-A graduação me deu algo mais valioso do que ferramentas: me deu linguagem para pensar sobre sistemas complexos. Modelagem matemática, algoritmos, estruturas de dados, redes, sistemas operacionais — cada disciplina ampliou minha capacidade de decompor problemas.
+A graduação me deu algo mais valioso do que ferramentas: ela me ensinou a pensar e a resolver problemas. Modelagem matemática, algoritmos, estruturas de dados, redes e sistemas operacionais — cada disciplina ampliou minha capacidade de decompor problemas complexos em partes menores.
 
-Aprendi que a maioria dos problemas de engenharia não é nova. O que muda é o contexto, a escala e as restrições.
+Inclusive, quando alguém me pergunta se eu sei fazer algo ou usar uma tecnologia que ainda não conheço, gosto de responder: **"Não sei, mas sei aprender."** Devo isso à engenharia.
+
+Aprendi que qualquer conceito, por mais complexo que seja, não passa de um conjunto de ideias simples conectadas entre si. Se entendermos profundamente essa base, aquilo que parecia difícil deixa de ser tão complicado.
+
+Essa reflexão me fez entender que os fundamentos são a parte mais importante: matemática, física, estruturas de dados, algoritmos e tudo aquilo que sustenta as tecnologias que usamos diariamente.
+
+Além disso, meu objetivo como engenheiro sempre será construir coisas. Sistemas, hardware, sites, servidores... Qualquer coisa que seja interessante e, principalmente, que possa ajudar alguém de alguma forma.
 
 ## Pesquisa científica
 
-Tenho interesse genuíno em pesquisa. A ciência como método — formular hipóteses, testar, refutar, iterar — é a forma mais honesta que encontramos de construir conhecimento acumulado.
+Tenho interesse genuíno em pesquisa. A ciência, como método — formular hipóteses, testar, refutar e iterar — é, para mim, a forma mais honesta que encontramos de construir conhecimento acumulado.
 
-Minha experiência com pesquisa me ensinou que a incerteza não é um obstáculo: é o ponto de partida.
+Acredito que o método científico seja uma das melhores ferramentas para resolver problemas e chegar a boas conclusões sobre aquilo que observamos.
+
+Pretendo fazer mestrado e doutorado e contribuir com a publicação de artigos científicos na área de engenharia.
 
 ## Infraestrutura e DevOps
 
-Grande parte do meu tempo prático é dedicada à infraestrutura: servidores Linux, containers, orquestração, observabilidade, pipelines de CI/CD e automação.
+Quando entrei na Engenharia da Computação, em 2022, meu conhecimento se resumia ao básico de programação e quase nada de Linux.
 
-O que me atrai nessa área é a proximidade com os fundamentos. Entender o que acontece entre o código e o hardware me torna um engenheiro mais completo.
+Naquele momento olhei para todas as áreas da tecnologia que eu poderia me especializar e pensei:
+
+> **"O que todas essas áreas têm em comum?"**
+
+Minha ideia era começar os estudos por algo que fosse essencial para qualquer profissional de TI. Cheguei à conclusão de que, independentemente da área que eu escolhesse, precisaria dominar **Git** e **Linux**. Foi por eles que comecei.
+
+Cerca de um ano depois encontrei uma vaga de estágio em que os únicos requisitos eram justamente esses dois conhecimentos. Consegui a oportunidade — em uma empresa pela qual tenho muito carinho até hoje — e foi lá que conheci a área de **DevOps**, que tem justamente Git e Linux como alguns de seus principais pilares.
+
+Ao longo do estágio também fui apresentado a conceitos mais avançados, como **Kubernetes**, **Observabilidade**, **CI/CD** e **Automação de Processos**.
+
+Eu não sei explicar o prazer que sinto nesse tipo de trabalho. Desde tarefas simples, como subir um servidor na nuvem e acessá-lo via SSH, até conceitos mais complexos, como a orquestração de contêineres, são justamente o tipo de desafio que gosto de encontrar no trabalho.
+
+O que mais me atrai nessa área é sua proximidade com os fundamentos. Gosto de entender o que acontece entre o código e o hardware — muitas vezes antes mesmo de o código existir.
 
 ## Inteligência Artificial
 
-Acompanho com atenção o desenvolvimento de modelos de linguagem e sistemas de IA. Não como consumidor passivo, mas como alguém interessado em entender como esses sistemas funcionam, onde falham e quais problemas realmente resolvem.
+Acompanho com atenção o desenvolvimento dos modelos de linguagem e dos sistemas de inteligência artificial.
 
-Minha compreensão atual é que a IA é uma ferramenta de amplificação — poderosa quando combinada com julgamento humano, limitada quando usada como substituto.
+Não porque pretenda desenvolver modelos ou trabalhar treinando IAs, mas porque acredito que essas ferramentas devem ser utilizadas da forma mais inteligente possível.
+
+Praticamente todos os projetos em que trabalhei desde o lançamento do ChatGPT, no fim de 2022, contaram de alguma forma com IA generativa para acelerar ou melhorar meu trabalho.
+
+A única exceção é quando estou estudando. Nesses momentos, meu objetivo é compreender profundamente uma tecnologia. Se eu simplesmente pedir para a IA fazer tudo por mim, sei que não vou aprender nada. Nessa situação prefiro usá-la como um professor, não como alguém que faz o trabalho no meu lugar.
 
 ## Empreendedorismo
 
-Acredito que engenheiros têm responsabilidade sobre o impacto do que constroem. Isso inclui pensar em como o trabalho técnico se traduz em valor real para pessoas e organizações.
+Ser empresário é um sonho antigo (e, convenhamos, bem difícil de realizar).
 
-Estou interessado em construir coisas que durem. Parte disso tomou forma na **IronFrame**, empresa que atua em duas frentes: desenvolvimento de software e infraestrutura de redes.
+Além de contribuir para o desenvolvimento de empresas e projetos, acredito que uma das melhores formas de ajudar as pessoas por meio da tecnologia é criando produtos e serviços de alta qualidade.
+
+Uma das minhas primeiras iniciativas nessa direção é a **IronFrame**, empresa que atua em duas frentes: desenvolvimento de software e infraestrutura de redes.
 
 <div class="callout">
   <p class="callout-label">IronFrame</p>
@@ -52,8 +78,10 @@ Estou interessado em construir coisas que durem. Parte disso tomou forma na **Ir
 
 ## Por que este site existe
 
-Escrever me força a pensar com mais clareza. Documentar projetos me obriga a entender o que realmente funcionou e o que não funcionou.
+Primeiramente, porque eu gosto de escrever. Tenho muitos registros particulares sobre diversas etapas da minha vida, e aqui pretendo compartilhar alguns que acredito que merecem ser lidos.
 
-Este site não é um portfólio de vendas nem um diário pessoal. É um registro do meu processo de aprendizado — aberto, honesto e em constante atualização.
+Este site não é um portfólio de vendas nem um diário pessoal. É um registro do meu processo de aprendizado — aberto, honesto e em constante evolução.
 
 Se você tiver interesse em trocar ideias, meu contato está na página [Contato](/contato/).
+
+Muito obrigado e seja bem-vindo!

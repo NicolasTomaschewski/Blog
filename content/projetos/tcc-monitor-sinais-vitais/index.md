@@ -1,9 +1,10 @@
 ---
 title: "Sistema de Monitoramento de Sinais Vitais"
-descricao: "Hardware e Software combinados para monitorar BPM, SpO2 e Temperatura Corporal e gerar relatórios com IA."
+description: "Hardware e Software combinados para monitorar BPM, SpO2 e Temperatura Corporal e gerar relatórios com IA."
 tecnologias: ["Python", "ESP32", "Flask", "MySQL", "API Gemini"]
 status: "Concluído"
-periodo: "2026"
+periodo: "set/2025 - jun/2026"
+repositorio: "https://github.com/NicolasTomaschewski/TCC-Monitor-de-Saude"
 date: 2026-06-23
 ---
 
@@ -13,7 +14,7 @@ Este foi o meu **Trabalho de Conclusão de Curso** em **Engenharia da Computaç�
 
 ## Objetivo
 
-O objetivo deste trabalho é desenvolver um sistema de monitoramento remoto de parâmetros básicos de saúde, capaz de coletar dados fisiológicos de um usuário por meio de **sensores biométricos** conectados a um **microcontrolador** e transmiti-los pela rede **Wi-Fi** para um servidor e apresentá-los em uma **interface web** com **visualização em tempo real**, **alertas clínicos** e **geração de relatório** através de inteligência artificial generativa.
+O objetivo deste trabalho é desenvolver um sistema de monitoramento remoto de parâmetros básicos de saúde, capaz de coletar dados fisiológicos de um usuário por meio de **sensores biométricos** conectados a um **microcontrolador** e transmiti-los pela rede **Wi-Fi** para um servidor. Os dados são apresentados em uma interface web com visualização em tempo real, alertas clínicos e geração de relatório através de inteligência artificial generativa.
 
 ## Arquitetura
 
@@ -21,14 +22,13 @@ O sistema foi estruturado em três camadas independentes:
 
 **Eletrônica** — Sensores **MAX30102** e **MLX90614** associados a um **ESP32** são responsáveis por aferir respectivamente **BPM/SpO2** e **Temperatura Corporal**.
 
-**Firmware** — O código que controla o sistema embarcado segue um passo a passo simples: conexão com a rede **Wi-Fi** desejada, inicialização dos sensores, leitura dos sinais vitais, validação dos dados lidos, envio para o servidor.
+**Firmware** — O código que controla o sistema embarcado segue um passo a passo simples: conexão com a rede Wi-Fi desejada, inicialização dos sensores, leitura dos sinais vitais, validação dos dados lidos, envio para o servidor.
 
 **Dashboard Web** — Ao acessar com login e senha o usuário tem acesso a duas telas principais: uma tela com três gráficos — um por parâmetro — junto com **estatísticas** gerais, e uma tela de geração de **diagnóstico/relatório** com **inteligência artificial generativa**.
 
-
 ## Desafios
 
-**Transmissão via Wi-Fi** — O principal desafio foi enviar os dados lidos pelos sensores para o servidor via **Wi-Fi**. Fazer isso por Bluetooth seria mais simples, mas o objetivo era viabilizar o monitoramento remoto — permitindo, por exemplo, que um médico acompanhe o paciente a distância.
+**Transmissão via Wi-Fi** — O principal desafio foi enviar os dados lidos pelos sensores para o servidor via Wi-Fi. Fazer isso por Bluetooth seria mais simples, mas o objetivo era viabilizar o monitoramento remoto — permitindo, por exemplo, que um médico acompanhe o paciente a distância.
 
 **IP dinâmico** — Durante o desenvolvimento, ficou evidente que o **IP** do servidor precisava estar fixo no código do firmware. O problema é que esse endereço muda com frequência em redes domésticas. A solução identificada foi hospedar o servidor em uma **VPS**, onde o IP se mantém fixo — o que ficou como ponto de melhoria para versões futuras do projeto.
 
@@ -40,15 +40,16 @@ Ao longo dos meses os resultados atingidos foram:
 
 **Hardware:**
 
-- Placa de circuito conectando o ESP32 aos dois Sensores
+- Placa de circuito conectando o ESP32 aos dois sensores
 - Case impresso em **3D** para proteção da placa e arremate
 
 **Dashboard:**
 - Tela de Login
-- Tela principal com gráficos e **estatísticas**
+- Tela principal com gráficos e estatísticas
 - Tela de Diagnóstico com IA Generativa e geração de relatório
-- Histórico dos dados pedidos nas últimas 24 horas no banco de dados
+- Histórico dos dados coletados nas últimas 24 horas no banco de dados
 
+{{< figure src="image-1.png" caption="Tela principal do dashboard: gráficos em tempo real de BPM, SpO2 e temperatura corporal, com estatísticas gerais." >}}
 
 ## Aprendizados
 
@@ -67,6 +68,10 @@ Ao longo dos meses os resultados atingidos foram:
 Ao longo do trabalho o seguinte artigo foi desenvolvido mostrando tudo o que foi estudado e desenvolvido:
 
 [Acessar artigo →](https://drive.google.com/file/d/1uCWhN1wQlHTRWaCt629nRY2J_msV9DOa/view?usp=sharing)
+
+Inclusive fico muito feliz em ter vencido o prêmio Projeto Destaque do Ceub na categoria Completude! Agradeço a todos que prestigiaram o trabalho, ao Ceub e ao meu professor Molina pela orientação.
+
+{{< figure src="image.png" width="360" caption="Recebendo o prêmio de Projeto Destaque do Ceub, categoria Completude." >}}
 
 <div class="callout">
   <p class="callout-label">Aviso</p>

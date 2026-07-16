@@ -1,9 +1,9 @@
 ---
+draft: true
 title: "git reflog salva vidas"
 description: "Quando você faz git reset --hard e acha que perdeu o trabalho."
 date: 2025-01-15
 tags: ["git", "debug", "ferramentas"]
-draft: true
 ---
 
 `git reflog` mantém um log de todos os movimentos do HEAD, incluindo aqueles que não aparecem no `git log`.
