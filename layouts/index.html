@@ -67,7 +67,7 @@
 </section>
 {{- end }}
 
-{{- $notas := where site.RegularPages "Section" "notas" -}}
+{{- $notas := (where site.RegularPages "Section" "notas").ByDate.Reverse -}}
 {{- if $notas }}
 <section class="section-block">
   <div class="container">

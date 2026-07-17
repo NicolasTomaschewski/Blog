@@ -5,7 +5,7 @@
     <p class="page-description">Ideias rápidas, descobertas técnicas e observações em formato de laboratório público.</p>
   </header>
 
-  {{- $pages := .Pages }}
+  {{- $pages := .Pages.ByDate.Reverse }}
   {{- if $pages }}
   <ul class="notes-list">
     {{- range $pages }}
