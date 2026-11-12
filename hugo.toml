@@ -1,5 +1,6 @@
 baseURL = "https://nicolastlopes.com.br/"
 languageCode = "pt-BR"
+defaultContentLanguage = "pt"
 title = "Nícolas Tomaschewski Lopes"
 enableRobotsTXT = true
 enableEmoji = false

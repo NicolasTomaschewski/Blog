@@ -56,7 +56,7 @@
       <li class="post-list-item">
         <a href="{{ .Permalink }}" class="post-list-link">{{ .Title }}</a>
         <div class="post-list-meta">
-          <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "02 Jan 2006" }}</time>
+          <time datetime="{{ .Date.Format "2006-01-02" }}">{{ time.Format "02 Jan 2006" .Date }}</time>
           {{- with .Params.categoria }}<span class="dot">·</span><span>{{ . }}</span>{{- end }}
           {{- if site.Params.showReadingTime }}<span class="dot">·</span><span>{{ .ReadingTime }} min de leitura</span>{{- end }}
         </div>
@@ -79,7 +79,7 @@
       {{- range first 5 $notas }}
       <li class="post-list-item">
         <a href="{{ .Permalink }}" class="post-list-link">{{ .Title }}</a>
-        <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "02 Jan 2006" }}</time>
+        <time datetime="{{ .Date.Format "2006-01-02" }}">{{ time.Format "02 Jan 2006" .Date }}</time>
       </li>
       {{- end }}
     </ul>

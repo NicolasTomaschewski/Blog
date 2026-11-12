@@ -41,7 +41,7 @@
 {{- end }}
 
 <!-- Twitter Card -->
-<meta name="twitter:card" content="summary">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{{ $title }}">
 <meta name="twitter:description" content="{{ $description }}">
 
@@ -57,7 +57,7 @@
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 
 <!-- og:image -->
-{{- $ogImage := "https://nicolastlopes.com.br/og-image.png" }}
+{{- $ogImage := "og-image.png" | absURL }}
 {{- with site.Params.ogImage }}{{ $ogImage = . }}{{ end }}
 <meta property="og:image" content="{{ $ogImage }}">
 <meta name="twitter:image" content="{{ $ogImage }}">

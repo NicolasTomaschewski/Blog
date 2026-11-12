@@ -11,7 +11,7 @@
     {{- range $pages }}
     <li class="note-item">
       <div class="note-date">
-        <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2006" }}</time>
+        <time datetime="{{ .Date.Format "2006-01-02" }}">{{ time.Format "Jan 2006" .Date }}</time>
       </div>
       <div class="note-content">
         <a href="{{ .Permalink }}" class="note-title">{{ .Title }}</a>

@@ -13,9 +13,11 @@
   {{- if eq .Section "blog" }}
   {{- $cats := slice "engenharia" "tecnologia" "reflexoes" "leituras" }}
   <div class="category-tabs">
-    <a href="/blog/" class="cat-tab{{ if not .Params.categoria }} cat-tab--active{{ end }}">Todos</a>
+    <a href="/blog/" class="cat-tab{{ if eq $.RelPermalink "/blog/" }} cat-tab--active{{ end }}">Todos</a>
     {{- range $cats }}
-    <a href="/blog/{{ . }}/" class="cat-tab{{ if eq $.Section . }} cat-tab--active{{ end }}">{{ . | title }}</a>
+    {{- with site.GetPage (printf "/blog/%s" .) }}
+    <a href="{{ .RelPermalink }}" class="cat-tab{{ if eq $.RelPermalink .RelPermalink }} cat-tab--active{{ end }}">{{ .Title }}</a>
+    {{- end }}
     {{- end }}
   </div>
   {{- end }}
@@ -28,13 +30,13 @@
   {{- end }}
   {{- if $pages }}
   <ul class="post-list">
-    {{- range $pages }}
+    {{- range (.Paginate $pages).Pages }}
     <li class="post-list-item post-list-item--full">
       <div class="post-list-content">
         <a href="{{ .Permalink }}" class="post-list-link">{{ .Title }}</a>
         {{- with .Description }}<p class="post-list-excerpt">{{ . | truncate 140 "..." }}</p>{{- end }}
         <div class="post-list-meta">
-          <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "02 Jan 2006" }}</time>
+          <time datetime="{{ .Date.Format "2006-01-02" }}">{{ time.Format "02 Jan 2006" .Date }}</time>
           {{- with .Params.categoria }}<span class="dot">·</span><span>{{ . }}</span>{{- end }}
           {{- if site.Params.showReadingTime }}<span class="dot">·</span><span>{{ .ReadingTime }} min</span>{{- end }}
         </div>
